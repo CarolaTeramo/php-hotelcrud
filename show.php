@@ -16,38 +16,36 @@
         exit();
       }
 
-      $sql = "SELECT room_number, floor, id FROM stanze";
+      $id_stanza = intval($_GET['id']);
+
+      $sql = "SELECT * FROM stanze WHERE id = $id_stanza";
       $result = $conn->query($sql);
 
       if ($result && $result->num_rows > 0) {
         // output data of each row
+        $row = $result->fetch_assoc();
     ?>
 
 
           <div class="container">
-            <h2>Tabella stanze</h2>
+            <h2>Stanza</h2>
             <table class="table">
               <thead>
                 <tr>
-                  <th>Stanza numero</th>
                   <th>Piano</th>
+                  <th>Numero Letti</th>
+                  <th>Data creazione</th>
+                  <th>Aggiornamento</th>
+                  <th>#</th>
                 </tr>
               </thead>
               <tbody>
-                <?php
-                  while($row = $result->fetch_assoc()){
-                ?>
                 <tr>
-                  <td><?php echo $row['room_number'];?></td>
                   <td><?php echo $row['floor'];?></td>
-                  <td>
-                    <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Visualizza</a>
-                    <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Modifica</a>
-                    <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Crea</a>
-                    <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Cancella</a>
-                  </td>
-                  <?php
-                  } //fine while ?>
+                  <td><?php echo $row['beds'];?></td>
+                  <td><?php echo $row['created_at'];?></td>
+                  <td><?php echo $row['updated_at'];?></td>
+                  <td><a href="index.php" class="btn btn.primary">Indietro</a></td>
                 </tr>
               </tbody>
             </table>

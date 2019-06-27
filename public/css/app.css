@@ -1,0 +1,39 @@
+.mia_nav {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid lightgrey;
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo_hotel {
+  width: 100%;
+  height: 100px;
+}
+
+.logo_hotel img {
+  margin-top: 10px;
+  width: 200px;
+  height: 80px;
+}
+
+.link {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lista li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.container h2 {
+  display: block;
+}
+

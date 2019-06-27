@@ -1,0 +1,9 @@
+@mixin around{
+  display: flex;
+  justify-content: space-around;
+}
+@mixin centra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
