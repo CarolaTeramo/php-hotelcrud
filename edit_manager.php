@@ -34,7 +34,10 @@
     ?>
 
     <div class="container">
-      <?php var_dump($result); ?>
+      <?php
+        //var_dump($result);
+        echo "Operazione conclusa con successo!"
+      ?>
     </div> <!-- fine container -->
 
 

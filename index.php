@@ -43,7 +43,7 @@
                   <td>
                     <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Visualizza</a>
                     <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Modifica</a>
-                    <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Crea</a>
+                    <a href="create.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Crea</a>
                     <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Cancella</a>
                   </td>
                   <?php
