@@ -25,7 +25,7 @@
 
       $id_stanza = intval($_POST['id']);
 
-      $sql = "DELETE FROM stanze SET WHERE id = $id_stanza";
+      $sql = "DELETE FROM stanze WHERE id = $id_stanza";
       $result = $conn->query($sql);
 
     ?>
