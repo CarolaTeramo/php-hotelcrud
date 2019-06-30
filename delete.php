@@ -24,18 +24,15 @@
       //prendo i dati dal post
 
       $id_stanza = intval($_POST['id']);
-      $room_number = intval($_POST['room_number']);
-      $floor = intval($_POST['floor']);
-      $beds = intval($_POST['beds']);
 
-      $sql = "INSERT INTO stanze (room_number, floor, beds, created_at, updated_at) VALUES ($room_number, $floor, $beds, NOW(), NOW())";
+      $sql = "DELETE FROM stanze SET WHERE id = $id_stanza";
       $result = $conn->query($sql);
 
     ?>
 
     <div class="container">
       <?php
-        //var_dump($result);
+        var_dump($result);
         echo "Operazione conclusa con successo!"
       ?>
     </div> <!-- fine container -->

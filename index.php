@@ -23,9 +23,11 @@
         // output data of each row
     ?>
 
-
-          <div class="container">
+          <div class="titolo">
             <h2>Tabella stanze</h2>
+            <a href="create.php" class="btn btn-default" >Crea</a>
+          </div>
+          <div class="container">
             <table class="table">
               <thead>
                 <tr>
@@ -43,8 +45,10 @@
                   <td>
                     <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Visualizza</a>
                     <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Modifica</a>
-                    <a href="create.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Crea</a>
-                    <a href="show.php?id=<?php echo $row['id'];?>" class="btn btn-default" >Cancella</a>
+                    <form class="cancellazione" action="delete.php" method="post">
+                      <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                      <input type="submit" value="Cancella">
+                    </form>
                   </td>
                   <?php
                   } //fine while ?>

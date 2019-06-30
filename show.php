@@ -28,7 +28,6 @@
 
 
           <div class="container">
-            <h2>Stanza</h2>
             <table class="table">
               <thead>
                 <tr>

@@ -40,26 +40,20 @@
                     <span class="input-group-addon" id="basic-addon1">Numero stanza</span>
                     <input type="text" class="form-control" placeholder="Numero stanza"
                     value="<?php echo $row['room_number'] ?>" name="room_number">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit">Salva</button>
-                    </span>
                   </div><!-- /input-group -->
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Piano</span>
                     <input type="text" class="form-control" placeholder="Piano"
                     value="<?php echo $row['floor'] ?>" name="floor">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit">Salva</button>
-                    </span>
                   </div><!-- /input-group -->
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Numero letti</span>
                     <input type="text" class="form-control" placeholder="Numero letti"
                     value="<?php echo $row['beds'] ?>" name="beds">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit">Salva</button>
-                    </span>
                   </div><!-- /input-group -->
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Salva</button>
+                  </span>
                 </form>
               </div>
             </div>
